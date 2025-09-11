@@ -27,10 +27,11 @@ def listar_tarefa(lista_de_tarefas):
     for tarefa in lista_de_tarefas:
         print(f"{n} {tarefa}")
         n += 1 # Isso é igual a escrever n = n + 1
+        print("-" * 25)
 
 def deletar_tarefa(lista_de_tarefas, tarefa):
     """Deleta uma única tarefa da lista pré-existente a partir do número"""
-    lista_de_tarefas.pop((tarefa - 1))
+    lista_de_tarefas.pop((int(tarefa) - 1))
     return lista_de_tarefas
 
 while continuar:
@@ -54,7 +55,7 @@ while continuar:
              print("Númeor inválido! Tente novamente")
         elif int(tarefa) > len(lista_de_tarefas):
             print("Númeor inválido! Tente novamente")
-        elif tarefa <= 0: 
+        elif int(tarefa) <= 0: 
              print("Númeor inválido! Tente novamente")
         else:
             deletar_tarefa(lista_de_tarefas, tarefa)
