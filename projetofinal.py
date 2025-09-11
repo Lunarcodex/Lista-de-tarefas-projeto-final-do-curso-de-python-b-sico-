@@ -52,11 +52,11 @@ while continuar:
         # A validação verifica se valor é número e depois se ele está presente na lista
         tarefa = input("insira o número da tarefa que deseja deletar: ")
         if not tarefa.isnumeric():
-             print("Númeor inválido! Tente novamente")
+             print("Número inválido! Tente novamente")
         elif int(tarefa) > len(lista_de_tarefas):
-            print("Númeor inválido! Tente novamente")
+            print("Número inválido! Tente novamente")
         elif int(tarefa) <= 0: 
-             print("Númeor inválido! Tente novamente")
+             print("Número inválido! Tente novamente")
         else:
             deletar_tarefa(lista_de_tarefas, tarefa)
     elif opcao == "4":
@@ -67,5 +67,6 @@ while continuar:
 
 
     
+
 
     
